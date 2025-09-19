@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apply | Tech Volunteers – Non-Profit</title>
+
+  <!-- External stylesheet required by the brief -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Page-specific (embedded) CSS required by the brief -->
+  <style>
+    :root {
+      --gap: 1rem;
+      --max: 900px;
+    }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      color: #111;
+      background: #fafafa;
+    }
+    header, footer {
+      background: #0d2b52;
+      color: #fff;
+      padding: 1rem;
+    }
+    header a, nav a { color: #fff; text-decoration: none; }
+    header a:focus, header a:hover, nav a:focus, nav a:hover { text-decoration: underline; }
+
+    main { padding: 1.25rem; display: grid; place-items: center; }
+    .container { width: 100%; max-width: var(--max); }
+
+    /* Form layout uses CSS Grid on wide screens, single column on small */
+    form {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 1px 6px rgba(0,0,0,.04);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--gap);
+    }
+    .field {
+      display: grid;
+      gap: .375rem;
+    }
+    .inline {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      align-items: start;
+      gap: .75rem;
+    }
+    .help { font-size: .9rem; color: #555; }
+    fieldset {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: .75rem .9rem 1rem;
+    }
+    legend { font-weight: 600; padding: 0 .25rem; }
+    .checkboxes, .radios {
+      display: grid;
+      gap: .35rem;
+      margin-top: .25rem;
+    }
+
+    /* Submit row uses Flexbox */
+    .actions {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: .5rem;
+    }
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: .7rem 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #0d2b52;
+      color: #fff;
+    }
+    button:focus-visible { outline: 3px solid #94c5ff; outline-offset: 2px; }
+    .secondary { background: #e5e7eb; color: #111; }
+
+    @media (min-width: 720px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .span-2 { grid-column: span 2; }
+    }
+
+    /* Small, obvious invalid state (browser still handles messages) */
+    input:required:invalid, select:required:invalid, textarea:invalid {
+      border: 1px solid #ef4444;
+      outline: none;
+    }
+    input, select, textarea {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: .6rem .7rem;
+      font: inherit;
+      background: #fff;
+    }
+    label { font-weight: 600; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html"><strong>Tech Volunteers</strong></a>
+      <nav aria-label="Primary" style="float:right"><!-- inline CSS example (required by brief) -->
+        <a href="index.html">Home</a> ·
+        <a href="jobs.html">Jobs</a> ·
+        <a href="apply.html" aria-current="page">Apply</a> ·
+        <a href="mailto:info@companyname.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Volunteer Application</h1>
+      <p class="help">All fields are required unless marked optional.</p>
+
+      <!-- HTML5 form, POST to formtest.php -->
+      <form action="formtest.php" method="post" novalidate aria-describedby="req">
+        <p id="req" class="help">Note: your browser will show validation hints if anything is missing or incorrectly formatted.</p>
+
+        <div class="form-grid">
+
+          <!-- Job reference number: exactly 5 alphanumeric -->
+          <div class="field inline">
+            <label for="ref">Job reference number</label>
+            <input id="ref" name="ref" type="text" inputmode="latin"
+                   maxlength="5" minlength="5" required
+                   pattern="[A-Za-z0-9]{5}"
+                   title="Exactly 5 letters or numbers (no spaces)."
+                   placeholder="e.g., A12B3">
+          </div>
+
+          <!-- First name: max 20 alpha -->
+          <div class="field inline">
+            <label for="firstName">First name</label>
+            <input id="firstName" name="firstName" type="text"
+                   required maxlength="20" pattern="[A-Za-z]{1,20}"
+                   title="Letters only (A–Z), up to 20 characters."
+                   placeholder="Given name">
+          </div>
+
+          <!-- Last name: max 20 alpha -->
+          <div class="field inline">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" type="text"
+                   required maxlength="20" pattern="[A-Za-z]{1,20}"
+                   title="Letters only (A–Z), up to 20 characters."
+                   placeholder="Family name">
+          </div>
+
+          <!-- Date of birth: dd/mm/yyyy -->
+          <div class="field inline">
+            <label for="dob">Date of birth</label>
+            <input id="dob" name="dob" type="text" required
+                   placeholder="dd/mm/yyyy"
+                   pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$"
+                   title="Use format dd/mm/yyyy, e.g., 07/09/2004">
+          </div>
+
+          <!-- Gender: radios inside fieldset + legend -->
+          <fieldset class="span-2">
+            <legend>Gender</legend>
+            <div class="radios" role="group" aria-labelledby="gender">
+              <div>
+                <input type="radio" id="g-male"   name="gender" value="Male" required>
+                <label for="g-male">Male</label>
+              </div>
+              <div>
+                <input type="radio" id="g-female" name="gender" value="Female" required>
+                <label for="g-female">Female</label>
+              </div>
+              <div>
+                <input type="radio" id="g-na"     name="gender" value="Prefer not to say" required>
+                <label for="g-na">Prefer not to say</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Street address: max 40 characters -->
+          <div class="field inline span-2">
+            <label for="street">Street address</label>
+            <input id="street" name="street" type="text" required maxlength="40"
+                   placeholder="123 Example St">
+          </div>
+
+          <!-- Suburb/Town: max 40 characters -->
+          <div class="field inline">
+            <label for="suburb">Suburb/Town</label>
+            <input id="suburb" name="suburb" type="text" required maxlength="40"
+                   placeholder="e.g., Footscray">
+          </div>
+
+          <!-- State dropdown -->
+          <div class="field inline">
+            <label for="state">State</label>
+            <select id="state" name="state" required>
+              <option value="" selected disabled>Choose…</option>
+              <option>VIC</option>
+              <option>NSW</option>
+              <option>QLD</option>
+              <option>NT</option>
+              <option>WA</option>
+              <option>SA</option>
+              <option>TAS</option>
+              <option>ACT</option>
+            </select>
+          </div>
+
+          <!-- Postcode: exactly 4 digits -->
+          <div class="field inline">
+            <label for="postcode">Postcode</label>
+            <input id="postcode" name="postcode" type="text" required
+                   inputmode="numeric" maxlength="4" minlength="4"
+                   pattern="^\d{4}$" title="Exactly 4 digits, e.g., 3000"
+                   placeholder="3000">
+          </div>
+
+          <!-- Email -->
+          <div class="field inline">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required
+                   placeholder="you@example.org" autocomplete="email">
+          </div>
+
+          <!-- Phone: 8–12 digits -->
+          <div class="field inline">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" required
+                   inputmode="numeric" pattern="^\d{8,12}$"
+                   title="8 to 12 digits, numbers only."
+                   placeholder="0412345678">
+          </div>
+
+          <!-- Skills: checkboxes (last is Other skills...) -->
+          <fieldset class="span-2">
+            <legend>Skills (select all that apply)</legend>
+            <div class="checkboxes">
+              <div>
+                <input type="checkbox" id="s-dev" name="skills" value="Software Development" required>
+                <label for="s-dev">Software Development</label>
+              </div>
+              <div>
+                <input type="checkbox" id="s-ui" name="skills" value="UI/UX Design">
+                <label for="s-ui">UI/UX Design</label>
+              </div>
+              <div>
+                <input type="checkbox" id="s-pm" name="skills" value="Project Management">
+                <label for="s-pm">Project Management</label>
+              </div>
+              <div>
+                <input type="checkbox" id="s-it" name="skills" value="IT Support">
+                <label for="s-it">IT Support</label>
+              </div>
+              <div>
+                <input type="checkbox" id="s-data" name="skills" value="Data/Analytics">
+                <label for="s-data">Data / Analytics</label>
+              </div>
+              <!-- Last checkbox text must be "Other skills..." -->
+              <div>
+                <input type="checkbox" id="s-other" name="skills" value="Other skills...">
+                <label for="s-other">Other skills…</label>
+              </div>
+            </div>
+            <p class="help">Select at least one skill to continue.</p>
+          </fieldset>
+
+          <!-- Other skills textarea (only optional field) -->
+          <div class="field span-2">
+            <label for="otherSkills">Other skills (optional)</label>
+            <textarea id="otherSkills" name="otherSkills" rows="4" maxlength="300"
+                      placeholder="Tell us about any other relevant skills or experience…"></textarea>
+            <p class="help">Max 300 characters.</p>
+          </div>
+
+          <div class="actions span-2">
+            <button type="submit" name="submit">Submit application</button>
+            <button type="reset" class="secondary">Clear form</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year">2025</span> Tech Volunteers – Non-Profit • <a href="mailto:info@companyname.com">info@companyname.com</a></p>
+    </div>
+    <script>
+      // tiny progressive enhancement
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
