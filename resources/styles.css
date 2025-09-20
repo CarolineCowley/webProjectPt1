@@ -1,0 +1,17 @@
+/*
+Author: Caroline, Kai, Amnah, Duy
+*/
+
+
+#jobsDescription{
+    text-align : center;
+}
+#jobsList{
+    text-align : center;
+    float : left;
+}
+#jobsAside{
+    float : right;
+    width : 30%;
+    text-align : center;
+}
