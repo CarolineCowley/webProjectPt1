@@ -6,19 +6,51 @@
   	    <meta name="description" content="Lists for the non-profit" />
   	    <meta name="keywords" content="Jobs, software, engineering, " />
   	    <meta name="author" content="Caroline, Duy, Amnah and Kai"/>
+        <style>
+            #jobsDescription{
+                text-align : center;
+            }  
+            #jobsList{
+                width : 60%;
+                padding : .7em;
+            }
+            #jobsAside{
+                float : right;
+                width : 33%;
+                text-align : center;
+                border : 1px solid gray;
+                border-radius : 10px;
+                padding : .3em;
+                margin-right : .5em;
+            }
+            .salary{
+                text-align : right;
+                color : darkgray
+            }
+            .alphanumericCode{
+                float: left;
+                color : darkgray
+            }
+            .jobsIndividual{
+                padding : .7em;
+                border-bottom : 2px solid darkgray;
+            }
+        </style>
     </head>
     <body>
-        <header></header>
-        <nav>
-            <a class="menu" href="about.html">About</a> 
-		    <a class="menu" href="jobs.html">Jobs</a>
-		    <a class="menu" href="apply.html">Apply</a>
-            <a class="menu" href="index.html">Index</a>
-        </nav>
+        <header>
+            <a href="index.html"><strong>LifeReady</strong></a>
+                <nav aria-label="Primary" style="float:center">
+                    <a href="index.html">Home</a> ·
+                    <a href="jobs.html">Jobs</a> ·
+                    <a href="apply.html" aria-current="page">Apply</a> ·
+                    <a href="mailto:info@companyname.com">Contact</a>
+                </nav>
+        </header>
 
         <section id="jobsDescription">
             <h1>We're hiring!</h1>
-            <p>We at [COMPANY NAME] are seeking to employ people in a variety of tech-based positions, including front-end web development and database management. Regardless of position, you will be part of a great team of motivated and capable individuals.</p>
+            <p>LifeReady is seeking to employ people in a variety of tech-based positions, including front-end web development and database management. Regardless of position, you will be part of a great team of motivated and capable individuals.</p>
         </section>
 
         <aside id="jobsAside">
@@ -27,17 +59,27 @@
         </aside>
 
         <section id="jobsList">
-            <h3>Database Management</h3>
-            <p>Our service requires secure managment and storage of data including but not limited to:</p>
-            <ul>
-                <li>Email accounts</li>
-                <li>Usernames and Passwords</li>
-                <li>Course videos and lectures</li>
-            </ul>
-
-            <h3>Front End Web Development</h3>
-            <p></p>
+            <div class="jobsIndividual">
+                <h3>Database Management</h3>
+                <p>Our service requires secure managment and storage of data including but not limited to:</p>
+                <ul>
+                    <li>Email accounts</li>
+                    <li>Usernames and Passwords</li>
+                    <li>Course videos and lectures</li>
+                </ul>
+                <div class="alphanumericCode">Code: DAT01</div>
+                <div class="salary">$80,000 Annual</div>
+                
+            </div>
+            <div class="jobsIndividual">
+                <h3>Front End Web Development</h3>
+                <p>Our website always requires updates and polishing to fit with the times, in a Front End web position you can look forward to using HTML, CSS, and JavaScript to develop a satisfactory experience to our clients. Additionally, this position is fully remote.</p>
+                <div class="alphanumericCode">Code: WEB01</div>
+                <div class="salary">$70,000 Annual</div>
+            </div>
         </section>
-        <footer></footer>
+        <footer>
+                <p>&copy; <span id="year">2025</span> LifeReady – Non-Profit • <a href="mailto:info@lifeready.com">info@lifeready.com</a></p>
+        </footer>
     </body>
 </html>
