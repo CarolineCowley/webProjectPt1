@@ -9,11 +9,13 @@
         <style>
             #jobsDescription{
                 text-align : center;
-            }  
+            } 
+
             #jobsList{
                 width : 60%;
                 padding : .7em;
             }
+
             #jobsAside{
                 float : right;
                 width : 33%;
@@ -23,17 +25,41 @@
                 padding : .3em;
                 margin-right : .5em;
             }
+
+            #jobsApplication{
+                width: 100%;
+                background-color: lightgray;
+                padding: 1em;
+            }
+
             .salary{
                 text-align : right;
                 color : darkgray
             }
+
             .alphanumericCode{
                 float: left;
                 color : darkgray
             }
+
             .jobsIndividual{
                 padding : .7em;
                 border-bottom : 2px solid darkgray;
+            }
+
+            .cta-button {
+                display: inline-block;
+                padding: 1rem 2rem;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                margin: 1em;
+            }
+            
+            .cta-button:hover{
+                background-color: #0056b3;
             }
         </style>
     </head>
@@ -43,8 +69,8 @@
                 <nav aria-label="Primary" style="float:center">
                     <a href="index.html">Home</a>
                     <a href="about.html">About</a> ·
-                    <a href="jobs.html">Jobs</a> ·
-                    <a href="apply.html" aria-current="page">Apply</a> ·
+                    <a href="jobs.html" aria-current="page">Jobs</a> ·
+                    <a href="apply.html">Apply</a> ·
                     <a href="mailto:info@companyname.com">Contact</a>
                 </nav>
         </header>
@@ -79,8 +105,23 @@
                 <div class="salary">$70,000 Annual</div>
             </div>
         </section>
-        <footer>
-                <p>&copy; <span id="year">2025</span> LifeReady – Non-Profit • <a href="mailto:info@lifeready.com">info@lifeready.com</a></p>
-        </footer>
+        <div id="jobsApplication">
+            <h1>Apply now!</h1>
+            <a class="cta-button" href="apply.html">Click here.</a>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-links">
+                <a href="https://jira.example.com" target="_blank">Jira Repository</a>
+                <a href="https://github.com/your-username/your-repo" target="_blank">
+                    GitHub Repository  
+                </a>
+            </div>
+        <div class="footer-contact">
+            <a href="mailto:info@lifeready.com">info@lifeready.com</a>
+        </div>
+        <p>&copy; 2025 LifeReady. All rights reserved.</p>
+      </div>
+    </footer>
     </body>
 </html>

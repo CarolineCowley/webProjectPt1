@@ -12,7 +12,10 @@ header,
 footer {
   background: #0d2b52;
   color: #fff;
-  padding: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
 }
 header a,
 nav a {
@@ -32,6 +35,10 @@ nav a:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+h1,h2 
+{
+  color: #007bff;
 }
 
 body {
@@ -91,15 +98,7 @@ body {
   color: #007bff;
 }
 /* Footer Styles */
-.footer {
-  background-color: #0d2b52;
-  color: #fff;
-  padding: 1rem 0;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  bottom: 0;
-}
+
 
 .footer-container {
   flex-direction: column;
