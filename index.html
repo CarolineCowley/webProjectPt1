@@ -6,11 +6,51 @@
     <title>LifeReady - Find Your Future</title>
     <link rel="stylesheet" href="./resources/styles.css" />
     <style>
+      @media (max-width: 768px) {
+        /* Styles for tablets and smaller devices */
+
+        /* Adjust header and navigation for smaller screens */
+        .header-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .nav ul {
+          flex-direction: column;
+          padding-top: 1rem;
+        }
+
+        .nav li {
+          margin: 0.5rem 0;
+        }
+
+        .company-slogan {
+          display: none; /* Hide the slogan on small screens to save space */
+        }
+
+        /* Adjust the main content sections to stack vertically */
+        .company-details,
+        .main-content {
+          flex-direction: column;
+        }
+
+        .company-details img,
+        .hero-image img {
+          margin-top: 1rem;
+          width: 100%;
+        }
+
+        .cta-button {
+          display: block; /* Make the button full-width */
+          text-align: center;
+        }
+      }
+
       body {
         background-image: url("./resources/images.jpeg");
-        background-size: cover; /* This makes the image cover the entire body */
-        background-position: center; /* This centers the image */
-        background-repeat: no-repeat; /* This prevents the image from repeating */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         background-attachment: fixed;
       }
       .main-content {

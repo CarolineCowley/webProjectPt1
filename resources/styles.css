@@ -56,10 +56,6 @@ footer {
   width: 100%;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-}
 .header-container,
 .footer-container {
   max-width: 1200px;
