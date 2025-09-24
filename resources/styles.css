@@ -27,6 +27,10 @@ nav a:hover {
   padding: 0;
   box-sizing: border-box;
 }
+h1,
+h2 {
+  color: #007bff;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -108,9 +112,6 @@ main {
   flex-grow: 1; /* This pushes the footer down */
 }
 /* Footer Styles */
-.footer {
-  bottom: 0;
-}
 
 .footer-container {
   flex-direction: column;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,11 +12,13 @@
       --primary-color: #0d2b52; /* dark blue */
       --primary-color-light: #184a8e;
       --background-color: #fafafa;
-      --text-color: #111;
+      --text-color: #111111;
       --border-color: #e5e7eb;
+      --hover-bg: #d6e0f5;
+      --hover-link: #0a1f3b;
     }
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
       line-height: 1.5;
       margin: 0;
       color: var(--text-color);
@@ -24,18 +26,20 @@
     }
     header, footer {
       background: var(--primary-color);
-      color: white;
+      color: #ffffff;
       padding: 1rem;
       text-align: center;
     }
     header a, footer a, nav a {
-      color: white;
+      color: #ffffff;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
     header a:focus, header a:hover,
     footer a:focus, footer a:hover,
     nav a:focus, nav a:hover {
       text-decoration: underline;
+      color: var(--hover-link);
     }
     main {
       padding: 1.25rem;
@@ -49,10 +53,20 @@
     section {
       margin-bottom: 2rem;
     }
+    /* Definition list styling with student ID on right */
     dl dt {
       font-weight: 700;
       margin-top: 1rem;
       color: var(--primary-color-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    dl dt span.student-id {
+      font-weight: 400;
+      color: #555555;
+      font-size: 0.9rem;
+      font-family: monospace, monospace;
     }
     dl dd {
       margin-left: 1rem;
@@ -63,10 +77,14 @@
       width: 100%;
       max-width: var(--max);
       margin: 0 auto;
-      background: white;
+      background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      box-shadow: 0 1px 6px rgba(0,0,0,.04);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+      transition: box-shadow 0.3s ease;
+    }
+    table:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     caption {
       font-weight: 700;
@@ -81,10 +99,38 @@
     }
     th {
       background: var(--primary-color-light);
-      color: white;
+      color: #ffffff;
+      font-weight: 700; /* ensure bold */
     }
     tbody tr:nth-child(even) {
       background: #f3f6fb;
+    }
+    tbody tr:hover {
+      background: var(--hover-bg);
+      cursor: default;
+    }
+    figure {
+      max-width: 300px;
+      margin: 1rem auto;
+      text-align: center;
+      border: 2px solid var(--primary-color-light);
+      border-radius: 8px;
+      padding: 0.5rem;
+      box-shadow: 0 2px 8px rgba(24, 74, 142, 0.3);
+    }
+    figure img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    figure figcaption {
+      font-style: italic;
+      color: var(--primary-color-light);
+      margin-top: 0.5rem;
+    }
+    ul.nested {
+      list-style-type: disc;
+      margin-left: 1.5rem;
     }
   </style>
 </head>
@@ -95,39 +141,64 @@
       <a href="index.html">Home</a> ·
       <a href="about.html" aria-current="page">About</a> ·
       <a href="apply.html">Apply</a> ·
-       <a href="jobs.html">Jobs</a> ·
-       <a href="mailto:info@companyname.com">Contact</a> 
+      <a href="jobs.html">Jobs</a> ·
+      <a href="mailto:info@companyname.com">Contact</a> 
     </nav>
   </header>
 
   <main>
     <h1>About Us</h1>
 
+    <!-- Group name and class day/time nested list -->
+    <section>
+      <h2>Group Details</h2>
+      <ul>
+        <li><strong>Group Name:</strong> G04 LifeReady Developers</li>
+        <li><strong>Class Day/Time:</strong>
+          <ul class="nested">
+            <li>Wednesday</li>
+            <li>12:30 PM - 2:30 PM</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Group photo with figure and border -->
+    <section>
+      <h2>Our Team Photo</h2>
+      <figure>
+        <img src="images/group_photo_small.jpg" alt="Photo of G04 LifeReady Team">
+        <figcaption>Our amazing G04 LifeReady Developers team (photo size under 300KB)</figcaption>
+      </figure>
+    </section>
+
+    <!-- Contributions with student ID on right -->
     <section>
       <h2>Our Contributions (randomly filled for now)</h2>
       <dl>
-        <dt>Amnah Saad (105917778)</dt>
-        <dd>Responsible for the About page. <br>
+        <dt>Amnah Saad <span class="student-id">(105917778)</span></dt>
+        <dd>Responsible for the About page.<br>
           Favourite language: HTML - "The building block of the web."</dd>
 
-        <dt>Caroline Cowley (106079682)</dt>
-        <dd>Built the .. page. <br>
+        <dt>Caroline Cowley <span class="student-id">(106079682)</span></dt>
+        <dd>Built the Jobs page.<br>
           Favourite language: CSS - "Style is substance."</dd>
 
-        <dt>Khuong Duy Phan (105559662)</dt>
-        <dd>Worked on the .. page. <br>
+        <dt>Khuong Duy Phan <span class="student-id">(105559662)</span></dt>
+        <dd>Worked on the Apply page.<br>
           Favourite language: JavaScript - "The spark of interactivity."</dd>
 
-        <dt>Duy Kiet Nguyen (105062270)</dt>
-        <dd>Developed the .. page. <br>
+        <dt>Duy Kiet Nguyen <span class="student-id">(105062270)</span></dt>
+        <dd>Developed the Home page.<br>
           Favourite language: Python - "Simple but powerful."</dd>
       </dl>
     </section>
 
+    <!-- Fun Facts Table -->
     <section>
       <h2>Fun Facts</h2>
       <table>
-        <caption>Meet the Team – Fun Edition</caption>
+        <caption>Meet the Team! </caption>
         <thead>
           <tr>
             <th>Name</th>
@@ -143,24 +214,28 @@
             <td>[Insert Dream Job]</td>
             <td>[Insert Fave Snack]</td>
             <td>[Insert Fave Colour]</td>
+            <td>[Insert Preference]</td>
           </tr>
           <tr>
             <td>Caroline</td>
             <td>[Insert Dream Job]</td>
             <td>[Insert Fave Snack]</td>
             <td>[Insert Fave Colour]</td>
+            <td>[Insert Preference]</td>
           </tr>
           <tr>
             <td>Khuong</td>
             <td>[Insert Dream Job]</td>
             <td>[Insert Fave Snack]</td>
             <td>[Insert Fave Colour]</td>
+            <td>[Insert Preference]</td>
           </tr>
           <tr>
             <td>Duy Kiet</td>
             <td>[Insert Dream Job]</td>
             <td>[Insert Fave Snack]</td>
             <td>[Insert Fave Colour]</td>
+            <td>[Insert Preference]</td>
           </tr>
         </tbody>
       </table>
