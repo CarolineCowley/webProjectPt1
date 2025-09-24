@@ -41,6 +41,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+.company-details p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
 header,
 footer {
   background-color: #0d2b52;
