@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href="resources/styles.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="description" content="Lists for the non-profit" />
-    <meta name="keywords" content="Jobs, software, engineering, " />
-    <meta name="author" content="Caroline, Duy, Amnah and Kai" />
-    <style>
-      #jobsDescription {
-        text-align: center;
-      }
-      #jobsList {
-        width: 60%;
-        padding: 0.7em;
-      }
-      #jobsAside {
-        float: right;
-        width: 33%;
-        text-align: center;
-        border: 1px solid;
-        border-radius: 10px;
-        padding: 0.3em;
-        margin-right: 0.5em;
-      }
-      .salary {
-        text-align: right;
-        color: darkgray;
-      }
-      .alphanumericCode {
-        float: left;
-        color: darkgray;
-      }
-      .jobsIndividual {
-        padding: 0.7em;
-        border-bottom: 2px solid;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <div class="header-container">
-        <div class="company-name"><a href="#">LifeReady</a></div>
-        <div class="company-slogan">
-          <p>Your slogan goes here.</p>
-        </div>
-        <nav class="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <head>
+        <link href="resources/styles.css" rel="stylesheet">
+        <meta charset="utf-8" />
+  	    <meta name="description" content="Lists for the non-profit" />
+  	    <meta name="keywords" content="Jobs, software, engineering, " />
+  	    <meta name="author" content="Caroline, Duy, Amnah and Kai"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>LifeReady Jobs List</title>
+        <style>
+            #jobsDescription{
+                text-align : center;
+                padding: 2.5em;
+            } 
 
-    <main>
-      <section id="jobsDescription">
-        <h1>We're hiring!</h1>
-        <p>
-          LifeReady is seeking to employ people in a variety of tech-based
-          positions, including front-end web development and database
-          management. Regardless of position, you will be part of a great team
-          of motivated and capable individuals.
-        </p>
-      </section>
+            #jobsList{
+                width : 60%;
+                padding : .7em;
+            }
+
+            #jobsAside{
+                float : right;
+                width : 33%;
+                text-align : center;
+                border : 1px solid gray;
+                border-radius : 10px;
+                padding : .3em;
+                margin-right : 2.5em;
+            }
+
+            #jobsApplication{
+                width: 100%;
+                background-color: #e9ecef;;
+                padding: 1em;
+            }
+
+            .salary{
+                text-align : right;
+                color : darkgray
+            }
+
+            .alphanumericCode{
+                float: left;
+                color : darkgray
+            }
+
+            .jobsIndividual{
+                padding : .7em;
+                border-bottom : 2px solid darkgray;
+            }
+
+            .cta-button {
+                display: inline-block;
+                padding: 1rem 2rem;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                margin: 1em;
+            }
+
+
+            
+            .cta-button:hover{
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="company-name"><a href="#">LifeReady</a></div>
+                <div class="company-slogan">
+                    <p>Your slogan goes here.</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="apply.html">Apply</a></li>
+                        <li><a href="mailto:info@lifeready.com">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="jobsDescription">
+            <h1>We're hiring!</h1>
+            <p class company-details>LifeReady is seeking to employ people in a variety of tech-based positions, including front-end web development and database management. Regardless of position, you will be part of a great team of motivated and capable individuals.</p>
+        </section>
 
       <aside id="jobsAside">
         <h3>Required Experience</h3>
