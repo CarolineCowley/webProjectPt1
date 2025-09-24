@@ -109,7 +109,7 @@ footer {
 main {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  flex-grow: 1; /* This pushes the footer down */
+  flex-grow: 1;
 }
 /* Footer Styles */
 
