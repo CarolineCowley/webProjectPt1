@@ -41,6 +41,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .company-details p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
@@ -110,9 +111,8 @@ footer {
   color: #007bff;
 }
 main {
-  margin: 80px auto 20px; /* Adjusted for fixed header */
+  margin: 80px 0 0 0px; /* Adjusted for fixed header */
   padding: 20px;
-  background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   flex-grow: 1; /* This pushes the footer down */
 }

@@ -6,6 +6,13 @@
     <title>LifeReady - Find Your Future</title>
     <link rel="stylesheet" href="./resources/styles.css" />
     <style>
+      body {
+        background-image: url("./resources/images.jpeg");
+        background-size: cover; /* This makes the image cover the entire body */
+        background-position: center; /* This centers the image */
+        background-repeat: no-repeat; /* This prevents the image from repeating */
+        background-attachment: fixed;
+      }
       .main-content {
         display: flex;
         align-items: center;
@@ -90,7 +97,6 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="jobs.html">Jobs</a></li>
             <li><a href="apply.html">Apply Jobs</a></li>
@@ -122,7 +128,7 @@
       <!-- main content section -->
       <div class="main-content">
         <div class="hero-content">
-          <h2>Join Our Team</h2>
+          <h2 style="color: #007bff">Join Our Team</h2>
           <p>
             A brief description of your company and what you're looking for.
           </p>
