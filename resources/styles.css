@@ -1,20 +1,14 @@
 /*
 Author: Caroline, Kai, Amnah, Duy
 */
-body {
+/* body {
   font-family: system-ui, -fontapple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.5;
   margin: 0;
   color: #111;
   background: #fafafa;
 }
-header,
-footer {
-  background: #0d2b52;
-  color: #fff;
-  padding: 1rem;
-}
-header a,
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -24,7 +18,7 @@ header a:hover,
 nav a:focus,
 nav a:hover {
   text-decoration: underline;
-}
+} */
 
 /*KAI  */
 /* Basic CSS Reset */
@@ -39,8 +33,23 @@ body {
   line-height: 1.6;
   /* color: #333; */
   background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+header,
+footer {
+  background-color: #0d2b52;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  width: 100%;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+}
 .header-container,
 .footer-container {
   max-width: 1200px;
@@ -85,19 +94,21 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
+  color: #fff;
 }
 
 .nav a:hover {
   color: #007bff;
 }
+main {
+  margin: 80px auto 20px; /* Adjusted for fixed header */
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex-grow: 1; /* This pushes the footer down */
+}
 /* Footer Styles */
 .footer {
-  background-color: #0d2b52;
-  color: #fff;
-  padding: 1rem 0;
-  text-align: center;
-  position: relative;
-  width: 100%;
   bottom: 0;
 }
 

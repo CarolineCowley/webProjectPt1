@@ -1,86 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link href="resources/styles.css" rel="stylesheet">
-        <meta charset="utf-8" />
-  	    <meta name="description" content="Lists for the non-profit" />
-  	    <meta name="keywords" content="Jobs, software, engineering, " />
-  	    <meta name="author" content="Caroline, Duy, Amnah and Kai"/>
-        <style>
-            #jobsDescription{
-                text-align : center;
-            }  
-            #jobsList{
-                width : 60%;
-                padding : .7em;
-            }
-            #jobsAside{
-                float : right;
-                width : 33%;
-                text-align : center;
-                border : 1px solid gray;
-                border-radius : 10px;
-                padding : .3em;
-                margin-right : .5em;
-            }
-            .salary{
-                text-align : right;
-                color : darkgray
-            }
-            .alphanumericCode{
-                float: left;
-                color : darkgray
-            }
-            .jobsIndividual{
-                padding : .7em;
-                border-bottom : 2px solid darkgray;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <a href="index.html"><strong>LifeReady</strong></a>
-                <nav aria-label="Primary" style="float:center">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a> ·
-                    <a href="jobs.html">Jobs</a> ·
-                    <a href="apply.html" aria-current="page">Apply</a> ·
-                    <a href="mailto:info@companyname.com">Contact</a>
-                </nav>
-        </header>
+  <head>
+    <link href="resources/styles.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="description" content="Lists for the non-profit" />
+    <meta name="keywords" content="Jobs, software, engineering, " />
+    <meta name="author" content="Caroline, Duy, Amnah and Kai" />
+    <style>
+      #jobsDescription {
+        text-align: center;
+      }
+      #jobsList {
+        width: 60%;
+        padding: 0.7em;
+      }
+      #jobsAside {
+        float: right;
+        width: 33%;
+        text-align: center;
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 0.3em;
+        margin-right: 0.5em;
+      }
+      .salary {
+        text-align: right;
+        color: darkgray;
+      }
+      .alphanumericCode {
+        float: left;
+        color: darkgray;
+      }
+      .jobsIndividual {
+        padding: 0.7em;
+        border-bottom: 2px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="company-name"><a href="#">LifeReady</a></div>
+        <div class="company-slogan">
+          <p>Your slogan goes here.</p>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <section id="jobsDescription">
-            <h1>We're hiring!</h1>
-            <p>LifeReady is seeking to employ people in a variety of tech-based positions, including front-end web development and database management. Regardless of position, you will be part of a great team of motivated and capable individuals.</p>
-        </section>
+    <main>
+      <section id="jobsDescription">
+        <h1>We're hiring!</h1>
+        <p>
+          LifeReady is seeking to employ people in a variety of tech-based
+          positions, including front-end web development and database
+          management. Regardless of position, you will be part of a great team
+          of motivated and capable individuals.
+        </p>
+      </section>
 
-        <aside id="jobsAside">
-            <h3>Required Experience</h3>
-            <p>All of our tech positions require at least a <strong>bachelor's in computer science or equivalent</strong>, and applicants with more experience will always be prefered.</p>
-        </aside>
+      <aside id="jobsAside">
+        <h3>Required Experience</h3>
+        <p>
+          All of our tech positions require at least a
+          <strong>bachelor's in computer science or equivalent</strong>, and
+          applicants with more experience will always be prefered.
+        </p>
+      </aside>
 
-        <section id="jobsList">
-            <div class="jobsIndividual">
-                <h3>Database Management</h3>
-                <p>Our service requires secure managment and storage of data including but not limited to:</p>
-                <ul>
-                    <li>Email accounts</li>
-                    <li>Usernames and Passwords</li>
-                    <li>Course videos and lectures</li>
-                </ul>
-                <div class="alphanumericCode">Code: DAT01</div>
-                <div class="salary">$80,000 Annual</div>
-                
-            </div>
-            <div class="jobsIndividual">
-                <h3>Front End Web Development</h3>
-                <p>Our website always requires updates and polishing to fit with the times, in a Front End web position you can look forward to using HTML, CSS, and JavaScript to develop a satisfactory experience to our clients. Additionally, this position is fully remote.</p>
-                <div class="alphanumericCode">Code: WEB01</div>
-                <div class="salary">$70,000 Annual</div>
-            </div>
-        </section>
-        <footer>
-                <p>&copy; <span id="year">2025</span> LifeReady – Non-Profit • <a href="mailto:info@lifeready.com">info@lifeready.com</a></p>
-        </footer>
-    </body>
+      <section id="jobsList">
+        <div class="jobsIndividual">
+          <h3>Database Management</h3>
+          <p>
+            Our service requires secure managment and storage of data including
+            but not limited to:
+          </p>
+          <ul>
+            <li>Email accounts</li>
+            <li>Usernames and Passwords</li>
+            <li>Course videos and lectures</li>
+          </ul>
+          <div class="alphanumericCode">Code: DAT01</div>
+          <div class="salary">$80,000 Annual</div>
+        </div>
+        <div class="jobsIndividual">
+          <h3>Front End Web Development</h3>
+          <p>
+            Our website always requires updates and polishing to fit with the
+            times, in a Front End web position you can look forward to using
+            HTML, CSS, and JavaScript to develop a satisfactory experience to
+            our clients. Additionally, this position is fully remote.
+          </p>
+          <div class="alphanumericCode">Code: WEB01</div>
+          <div class="salary">$70,000 Annual</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-links">
+          <a href="https://jira.example.com" target="_blank">Jira Repository</a>
+          |
+          <a href="https://github.com/your-username/your-repo" target="_blank"
+            >GitHub Repository</a
+          >
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:info@lifeready.com">info@lifeready.com</a>
+        </div>
+        <p>&copy; 2025 LifeReady. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
