@@ -98,15 +98,20 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <a href="index.html"><strong>LifeReady</strong></a>
-      <nav aria-label="Primary" style="float:right"><!-- inline CSS example (required by brief) -->
-        <a href="index.html">Home</a> ·
-        <a href="about.html">About</a> ·
-        <a href="jobs.html">Jobs</a> ·
-        <a href="apply.html" aria-current="page">Apply</a> ·
-        <a href="mailto:info@companyname.com">Contact</a>
+  <header class="header">
+    <div class="header-container">
+      <div class="company-name"><a href="#">LifeReady</a></div>
+      <div class="company-slogan">
+        <p>Preparing the next generation.</p>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="mailto:info@lifeready.com">Contact</a></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -283,14 +288,19 @@
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; <span id="year">2025</span> LifeReady – Non-Profit • <a href="mailto:info@lifeready.com">info@companyname.com</a></p>
+  <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-links">
+        <a href="https://jira.example.com" target="_blank">Jira Repository</a>
+        <a href="https://github.com/your-username/your-repo" target="_blank">
+          GitHub Repository
+        </a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:info@lifeready.com">info@lifeready.com</a>
+      </div>
+      <p>&copy; 2025 LifeReady. All rights reserved.</p>
     </div>
-    <script>
-      // tiny progressive enhancement
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
 </body>
 </html>
