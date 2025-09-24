@@ -6,6 +6,8 @@
   	    <meta name="description" content="Lists for the non-profit" />
   	    <meta name="keywords" content="Jobs, software, engineering, " />
   	    <meta name="author" content="Caroline, Duy, Amnah and Kai"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>LifeReady Jobs List</title>
         <style>
             #jobsDescription{
                 text-align : center;
@@ -23,12 +25,12 @@
                 border : 1px solid gray;
                 border-radius : 10px;
                 padding : .3em;
-                margin-right : .5em;
+                margin-right : 2.5em;
             }
 
             #jobsApplication{
                 width: 100%;
-                background-color: lightgray;
+                background-color: #e9ecef;;
                 padding: 1em;
             }
 
@@ -57,6 +59,8 @@
                 transition: background-color 0.3s;
                 margin: 1em;
             }
+
+            
             
             .cta-button:hover{
                 background-color: #0056b3;
@@ -65,14 +69,20 @@
     </head>
     <body>
         <header>
-            <a href="index.html"><strong>LifeReady</strong></a>
-                <nav aria-label="Primary" style="float:center">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a> ·
-                    <a href="jobs.html" aria-current="page">Jobs</a> ·
-                    <a href="apply.html">Apply</a> ·
-                    <a href="mailto:info@companyname.com">Contact</a>
+            <div class="header-container">
+                <div class="company-name"><a href="#">LifeReady</a></div>
+                <div class="company-slogan">
+                    <p>Your slogan goes here.</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="jobs.html">Jobs</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </nav>
+            </div>
         </header>
 
         <section id="jobsDescription">
@@ -88,7 +98,7 @@
         <section id="jobsList">
             <div class="jobsIndividual">
                 <h3>Database Management</h3>
-                <p>Our service requires secure managment and storage of data including but not limited to:</p>
+                <p>Our service requires secure managment and storage of data and content including but not limited to:</p>
                 <ul>
                     <li>Email accounts</li>
                     <li>Usernames and Passwords</li>
@@ -100,7 +110,7 @@
             </div>
             <div class="jobsIndividual">
                 <h3>Front End Web Development</h3>
-                <p>Our website always requires updates and polishing to fit with the times, in a Front End web position you can look forward to using HTML, CSS, and JavaScript to develop a satisfactory experience to our clients. Additionally, this position is fully remote.</p>
+                <p>Our website always requires updates and polishing to fit with the times, in a Front End web position you can look forward to using HTML, CSS, and JavaScript to develop a satisfactory experience to our clients. Additionally, this position is fully remote, working from home is an option!</p>
                 <div class="alphanumericCode">Code: WEB01</div>
                 <div class="salary">$70,000 Annual</div>
             </div>
