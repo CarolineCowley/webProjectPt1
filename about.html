@@ -1,15 +1,15 @@
 <!DOCTYPE html> 
 <html lang="en">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us (G04) | LifeReady</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="resources/styles.css" rel="stylesheet">
   <style>
     :root {
       --gap: 1rem;
       --max: 900px;
-      --primary-color: #0d2b52; /* dark blue */
+      --primary-color: #0d2b52;
       --primary-color-light: #184a8e;
       --background-color: #fafafa;
       --text-color: #111111;
@@ -51,8 +51,29 @@
       color: var(--primary-color);
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
+
+    .group-details {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .group-details ul {
+      list-style-position: inside;
+      padding-left: 0;     
+    }
+
+    /*.group-details li {
+      text-align: center;
+    }*/
+
+    .group-details .nested {
+      /*margin-top: 0.5rem; */
+      list-style-position: inside;
+    }
+
     /* Definition list styling with student ID on right */
     dl dt {
       font-weight: 700;
@@ -135,7 +156,7 @@
   </style>
 </head>
 <body>
-  <header>
+ <!-- <header>
     <a href="index.html"><strong>LifeReady</strong></a>
     <nav aria-label="Primary" style="margin-top: 0.5rem;">
       <a href="index.html">Home</a> ·
@@ -144,37 +165,37 @@
       <a href="jobs.html">Jobs</a> ·
       <a href="mailto:info@companyname.com">Contact</a> 
     </nav>
-  </header>
+  </header> -->
 
-   <!-- <header>
+   <header>
       <div class="header-container">
-        <div class="company-name"><a href="#">LifeReady</a></div>
+        <div class="company-name"><a href="index.html">LifeReady</a></div>
         <div class="company-slogan">
-          <p>Your slogan goes here.</p>
+          <p>Preparing the next generation.</p>
         </div>
         <nav class="nav">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="apply.html">Apply</a></li>
+            <li><a href="mailto:info@lifeready.com">Contact</a></li>
           </ul>
         </nav>
       </div>
-    </header> -->
+    </header>
 
   <main>
     <h1>About Us</h1>
 
     <!-- Group name and class day/time nested list -->
-    <section>
+    <section class="group-details">
       <h2>Group Details</h2>
       <ul>
         <li><strong>Group Name:</strong> G04 LifeReady Developers</li>
         <li><strong>Class Day/Time:</strong>
           <ul class="nested">
-            <li>Wednesday</li>
-            <li>12:30 PM - 2:30 PM</li>
+            Wednesday 12:30 PM - 2:30 PM
           </ul>
         </li>
       </ul>
@@ -182,16 +203,36 @@
 
     <!-- Group photo with figure and border -->
     <section>
-      <h2>Our Team Photo</h2>
+      <h2>Our Team</h2>
       <figure>
-        <img src="images/group_photo_small.jpg" alt="Photo of G04 LifeReady Team">
-        <figcaption>G04 LifeReady Developers team (photo size under 300KB)</figcaption>
+        <img src="resources/photo_caroline.JPG" 
+        alt="Photos of G04 LifeReady Team">
+        <figcaption>G04 LifeReady Developers team - Caroline</figcaption>
       </figure>
+
+      <figure>
+        <img src="resources/photo_amnah.jpg" 
+        alt="Photos of G04 LifeReady Team">
+        <figcaption>G04 LifeReady Developers team - Amnah (photo size under 300KB)</figcaption>
+      </figure>
+
+      <figure>
+        <img src="resources/photo_duy.JPG" 
+        alt="Photos of G04 LifeReady Team">
+        <figcaption>G04 LifeReady Developers team - Duy </figcaption>
+      </figure>
+
+      <figure>
+        <img src="resources/photo_kai.JPG"  
+        alt="Photos of G04 LifeReady Team">
+        <figcaption>G04 LifeReady Developers team - Kai </figcaption>
+      </figure>
+
     </section>
 
     <!-- Contributions with student ID on right -->
     <section>
-      <h2>Our Contributions (randomly filled for now)</h2>
+      <h2>Our Contributions</h2>
       <dl>
         <dt>Amnah Saad <span class="student-id">(105917778)</span></dt>
         <dd>Responsible for the About page.<br>
@@ -199,15 +240,15 @@
 
         <dt>Caroline Cowley <span class="student-id">(106079682)</span></dt>
         <dd>Built the Jobs page.<br>
-          Favourite language: CSS - "Style is substance."</dd>
+          Favourite language: Python - "Simple and versatile."</dd>
 
         <dt>Khuong Duy Phan <span class="student-id">(105559662)</span></dt>
         <dd>Worked on the Apply page.<br>
-          Favourite language: JavaScript - "The spark of interactivity."</dd>
+          Favourite language: Python - "Simple and easy to use."</dd>
 
         <dt>Duy Kiet Nguyen <span class="student-id">(105062270)</span></dt>
         <dd>Developed the Home page.<br>
-          Favourite language: Python - "Simple but powerful."</dd>
+          Favourite language: JavaScript - "Suitable for learning Fullstack."</dd>
       </dl>
     </section>
 
@@ -219,40 +260,40 @@
         <thead>
           <tr>
             <th>Name</th>
-            <th>Dream Job</th>
+            <th>Keyboard shortcut you overuse?</th>
             <th>Favourite Coding Snack</th>
-            <th>Favourite Colour</th>
+            <th>Pet's name?</th>
             <th>Dark mode or Light mode?</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Amnah</td>
-            <td>[Insert Dream Job]</td>
-            <td>[Insert Fave Snack]</td>
-            <td>[Insert Fave Colour]</td>
-            <td>[Insert Preference]</td>
+            <td>Ctrl Z</td>
+            <td>Green Apples</td>
+            <td>Don't have one but would want a cat</td>
+            <td>Dark mode, usually</td>
           </tr>
           <tr>
             <td>Caroline</td>
-            <td>[Insert Dream Job]</td>
-            <td>[Insert Fave Snack]</td>
-            <td>[Insert Fave Colour]</td>
-            <td>[Insert Preference]</td>
+            <td>Ctrl X and Ctrl V</td>
+            <td>Carrots</td>
+            <td>A cat, Kevin</td>
+            <td>Dark mode, all the time</td>
           </tr>
           <tr>
-            <td>Khuong</td>
-            <td>[Insert Dream Job]</td>
-            <td>[Insert Fave Snack]</td>
-            <td>[Insert Fave Colour]</td>
-            <td>[Insert Preference]</td>
+            <td>Duy</td>
+            <td>Alt+F4</td>
+            <td>Fries</td>
+            <td>Ben</td>
+            <td>Dark mode</td>
           </tr>
           <tr>
-            <td>Duy Kiet</td>
-            <td>[Insert Dream Job]</td>
-            <td>[Insert Fave Snack]</td>
-            <td>[Insert Fave Colour]</td>
-            <td>[Insert Preference]</td>
+            <td>Kai</td>
+            <td>Ctrl C</td>
+            <td>One-bite snacks</td>
+            <td>No pets</td>
+            <td>Dark mode always</td>
           </tr>
         </tbody>
       </table>
